@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1840" height="1390" viewBox="0 0 1840 1390" role="img">
+  <title>図Ⅲ-1 基礎分析結果を用いたAI分析の構成</title>
+  <desc>204の基礎分析結果と301の問いを302で入力に構成する。303が304の推論基盤を利用し、305へ結果を保存する。HotakaのH01がモデル切替、H02がKVキャッシュの状態確認・退避・復元を指示し、304のllama.cppが実行する。 302が問い・条件に応じて504へ検索を要求し、503から取得した関連知識と根拠を302へ返す。302でRAG注入を行い、基礎分析結果・問いと共にLLMの推論INPUTを構成する。</desc>
+  <rect width="1840" height="1390" fill="white" />
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="black" />
+    </marker>
+  </defs>
+  <text x="920" y="62" font-family="MS Mincho,Yu Mincho,serif" font-size="34" text-anchor="middle" fill="black">【図Ⅲ-1】基礎分析結果を用いたAI分析の構成</text>
+  <text x="100" y="132" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="start" fill="black">Ⅱ Hotaka｜基礎分析</text>
+  <text x="1120" y="132" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="start" fill="black">Ⅲ 発想・分析</text>
+  <rect x="100" y="190" width="550" height="130" fill="none" stroke="black" stroke-width="2" />
+  <text x="620" y="176" font-family="MS Mincho,Yu Mincho,serif" font-size="24" text-anchor="middle" fill="black">204</text>
+  <text x="375" y="244" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="middle" fill="black">基礎分析結果記憶部</text>
+  <text x="375" y="286" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">特性・傾向・予想・検証の結果</text>
+  <rect x="1100" y="190" width="550" height="130" fill="none" stroke="black" stroke-width="2" />
+  <text x="1620" y="176" font-family="MS Mincho,Yu Mincho,serif" font-size="24" text-anchor="middle" fill="black">301</text>
+  <text x="1375" y="244" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="middle" fill="black">発想・分析の指向</text>
+  <text x="1375" y="286" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">目的・問い・仮説・着眼点</text>
+  <rect x="650" y="485" width="550" height="140" fill="none" stroke="black" stroke-width="2" />
+  <text x="1170" y="471" font-family="MS Mincho,Yu Mincho,serif" font-size="24" text-anchor="middle" fill="black">302</text>
+  <text x="925" y="544" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="middle" fill="black">分析条件の構成部</text>
+  <text x="925" y="586" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">結果・問い・条件・参照知識</text>
+  <polyline points="375,320 375,420 780,420 780,485" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="560" y="397" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="middle" fill="black">結果・評価基準日・条件</text>
+  <polyline points="1375,320 1375,420 1070,420 1070,485" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="1300" y="397" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="middle" fill="black">分析の指向</text>
+  <rect x="650" y="805" width="550" height="140" fill="none" stroke="black" stroke-width="2" />
+  <text x="1170" y="791" font-family="MS Mincho,Yu Mincho,serif" font-size="24" text-anchor="middle" fill="black">303</text>
+  <text x="925" y="864" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="middle" fill="black">AIを活用した分析部</text>
+  <text x="925" y="906" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">要求・応答・出力形式を管理</text>
+  <polyline points="925,625 925,805" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="950" y="715" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="start" fill="black">構成したINPUT</text>
+  <rect x="1310" y="485" width="460" height="140" fill="none" stroke="black" stroke-width="2" />
+  <text x="1740" y="471" font-family="MS Mincho,Yu Mincho,serif" font-size="24" text-anchor="middle" fill="black">H01</text>
+  <text x="1540" y="544" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="middle" fill="black">Hotaka側：LLMモデル管理</text>
+  <text x="1540" y="586" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">モデル選択・切替・状態管理</text>
+  <rect x="1360" y="750" width="410" height="250" fill="none" stroke="black" stroke-width="2" />
+  <text x="1740" y="736" font-family="MS Mincho,Yu Mincho,serif" font-size="24" text-anchor="middle" fill="black">304</text>
+  <text x="1565" y="822" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="middle" fill="black">AI推論基盤</text>
+  <text x="1565" y="864" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">llama.cpp / llama-server</text>
+  <text x="1565" y="906" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">推論・KVキャッシュ管理</text>
+  <text x="1565" y="948" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">選択したLLMを実行</text>
+  <polyline points="1450,625 1450,750" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="1430" y="692" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="end" fill="black">切替コマンド</text>
+  <polyline points="1670,750 1670,625" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="1690" y="692" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="start" fill="black">状態</text>
+  <polyline points="1200,835 1360,835" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="1280" y="814" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="middle" fill="black">推論要求</text>
+  <polyline points="1360,915 1200,915" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="1280" y="961" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="middle" fill="black">応答</text>
+  <rect x="650" y="1150" width="550" height="140" fill="none" stroke="black" stroke-width="2" />
+  <text x="1170" y="1136" font-family="MS Mincho,Yu Mincho,serif" font-size="24" text-anchor="middle" fill="black">305</text>
+  <text x="925" y="1209" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="middle" fill="black">分析結果記憶部</text>
+  <text x="925" y="1251" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">解釈・仮説・入力・応答の履歴</text>
+  <polyline points="925,945 925,1150" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="950" y="1060" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="start" fill="black">結果・実行条件・根拠参照</text>
+  <rect x="100" y="1150" width="350" height="140" fill="none" stroke="black" stroke-width="2" />
+  <text x="420" y="1136" font-family="MS Mincho,Yu Mincho,serif" font-size="24" text-anchor="middle" fill="black">401</text>
+  <text x="275" y="1209" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="middle" fill="black">可視化部</text>
+  <text x="275" y="1251" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">基礎分析結果と解釈の表示</text>
+  <polyline points="650,1220 450,1220" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="550" y="1194" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="middle" fill="black">分析結果</text>
+  <text x="100" y="1353" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="start" fill="black">矢印は要求・応答とデータの流れ。Hotakaが管理操作を指示し、304が実行する。</text>
+  <rect data-box="H02" x="1310" y="1150" width="460" height="140" fill="none" stroke="black" stroke-width="2" />
+  <text x="1740" y="1136" font-family="MS Mincho,Yu Mincho,serif" font-size="24" text-anchor="middle" fill="black">H02</text>
+  <text x="1540" y="1209" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="middle" fill="black">Hotaka側：KVキャッシュ管理</text>
+  <text x="1540" y="1251" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">状態確認・退避・復元の制御</text>
+  <polyline points="1450,1150 1450,1000" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="1430" y="1052" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="end" fill="black">状態確認</text>
+  <text x="1430" y="1086" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="end" fill="black">退避・復元</text>
+  <polyline points="1670,1000 1670,1150" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="1690" y="1052" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="start" fill="black">KV状態</text>
+  <text x="1690" y="1086" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="start" fill="black">操作結果</text>
+  <text x="100" y="440" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="start" fill="black">Ⅴ 知識の検索・利用</text>
+  <rect data-box="503" x="100" y="485" width="350" height="140" fill="none" stroke="black" stroke-width="2" />
+  <text x="420" y="471" font-family="MS Mincho,Yu Mincho,serif" font-size="24" text-anchor="middle" fill="black">503</text>
+  <text x="275.0" y="544" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="middle" fill="black">ベクトル化・知識記憶部</text>
+  <text x="275.0" y="586" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">知見・根拠・適用条件</text>
+  <rect data-box="504" x="100" y="805" width="350" height="140" fill="none" stroke="black" stroke-width="2" />
+  <text x="420" y="791" font-family="MS Mincho,Yu Mincho,serif" font-size="24" text-anchor="middle" fill="black">504</text>
+  <text x="275.0" y="864" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="middle" fill="black">関連知識の検索・入力部</text>
+  <text x="275.0" y="906" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">問い・条件に応じて検索</text>
+  <polyline data-flow="503-to-504" points="275,625 275,805" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="300" y="720" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="start" fill="black">蓄積知識</text>
+  <polyline data-flow="302-to-504" points="650,520 530,520 530,835 450,835" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="510" y="695" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="end" fill="black">検索要求</text>
+  <polyline data-flow="504-to-302-rag" points="450,915 580,915 580,595 650,595" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="600" y="700" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="start" fill="black">関連知識・根拠</text>
+  <text x="600" y="735" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="start" fill="black">（RAG注入）</text>
+</svg>

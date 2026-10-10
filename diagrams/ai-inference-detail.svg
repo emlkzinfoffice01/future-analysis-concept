@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1840" height="1740" viewBox="0 0 1840 1740" role="img"><title>図Ⅲ-2 304 AI推論基盤の詳細構成</title><desc>Hotakaが推論、モデル切替、KVキャッシュの状態確認・退避・復元を指示する。llama.cppが推論モデルを読み込み、ホストのメインメモリ上のKVキャッシュと永続ストレージ上の退避ファイルを管理する。Magnitudeは成熟度と必要機能への適合を確認する移行候補。</desc><rect width="1840" height="1740" fill="white"/><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="black"/></marker></defs>
+<text x="920" y="62" font-family="MS Mincho,Yu Mincho,serif" font-size="34" text-anchor="middle" fill="black">【図Ⅲ-2】304 AI推論基盤の詳細構成</text>
+<text x="80" y="205" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="start" fill="black">Hotaka側：要求・実行管理</text>
+<rect data-box="304" x="830" y="200" width="950" height="1160" fill="none" stroke="black" stroke-width="2"/>
+<text x="1750" y="186" font-family="MS Mincho,Yu Mincho,serif" font-size="24" text-anchor="middle" fill="black">304</text>
+<text x="865" y="255" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="start" fill="black">AI推論基盤</text>
+<rect data-box="303" x="80" y="350" width="420" height="180" fill="none" stroke="black" stroke-width="2"/>
+<text x="470" y="336" font-family="MS Mincho,Yu Mincho,serif" font-size="24" text-anchor="middle" fill="black">303</text>
+<text x="290" y="429" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="middle" fill="black">AIを活用した分析部</text>
+<text x="290" y="471" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">分析INPUT・推論結果</text>
+<rect data-box="H01" x="80" y="680" width="420" height="180" fill="none" stroke="black" stroke-width="2"/>
+<text x="470" y="666" font-family="MS Mincho,Yu Mincho,serif" font-size="24" text-anchor="middle" fill="black">H01</text>
+<text x="290" y="759" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="middle" fill="black">LLMモデル管理</text>
+<text x="290" y="801" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">モデル選択・設定・状態</text>
+<rect data-box="H02" x="80" y="1010" width="420" height="180" fill="none" stroke="black" stroke-width="2"/>
+<text x="470" y="996" font-family="MS Mincho,Yu Mincho,serif" font-size="24" text-anchor="middle" fill="black">H02</text>
+<text x="290" y="1089" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="middle" fill="black">KVキャッシュ管理</text>
+<text x="290" y="1131" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">実行・保存情報の対応付け</text>
+<rect data-box="E01" x="885" y="340" width="365" height="880" fill="none" stroke="black" stroke-width="2"/>
+<text x="1220" y="326" font-family="MS Mincho,Yu Mincho,serif" font-size="24" text-anchor="middle" fill="black">E01</text>
+<text x="1067.5" y="663" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="middle" fill="black">推論エンジン</text>
+<text x="1067.5" y="718" font-family="MS Mincho,Yu Mincho,serif" font-size="32" text-anchor="middle" fill="black">llama.cpp</text>
+<text x="1067.5" y="760" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="middle" fill="black">llama-server</text>
+<text x="1067.5" y="825" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">モデル読込・推論</text>
+<text x="1067.5" y="867" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">KV管理・退避・復元</text>
+<rect data-box="E02" x="1410" y="350" width="320" height="180" fill="none" stroke="black" stroke-width="2"/>
+<text x="1700" y="336" font-family="MS Mincho,Yu Mincho,serif" font-size="24" text-anchor="middle" fill="black">E02</text>
+<text x="1570" y="408" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="middle" fill="black">推論モデル</text>
+<text x="1570" y="450" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">gpt-oss-20b 等</text>
+<text x="1570" y="492" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">選択して読込</text>
+<rect data-box="E03" x="1410" y="680" width="320" height="180" fill="none" stroke="black" stroke-width="2"/>
+<text x="1700" y="666" font-family="MS Mincho,Yu Mincho,serif" font-size="24" text-anchor="middle" fill="black">E03</text>
+<text x="1570" y="738" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="middle" fill="black">メインメモリ</text>
+<text x="1570" y="780" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">稼働中のKVキャッシュ</text>
+<text x="1570" y="822" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">ホストRAM</text>
+<rect data-box="E04" x="1410" y="1010" width="320" height="180" fill="none" stroke="black" stroke-width="2"/>
+<text x="1700" y="996" font-family="MS Mincho,Yu Mincho,serif" font-size="24" text-anchor="middle" fill="black">E04</text>
+<text x="1570" y="1068" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="middle" fill="black">永続ストレージ</text>
+<text x="1570" y="1110" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">退避したKVキャッシュ</text>
+<text x="1570" y="1152" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">保存ファイル</text>
+<polyline points="500,405 885,405" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="692" y="385" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="middle" fill="black">推論要求</text>
+<polyline points="885,475 500,475" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="692" y="514" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="middle" fill="black">推論応答</text>
+<polyline points="500,735 885,735" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="692" y="715" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="middle" fill="black">モデル切替コマンド</text>
+<polyline points="885,805 500,805" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="692" y="844" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="middle" fill="black">モデル・稼働状態</text>
+<polyline points="500,1065 885,1065" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="692" y="1045" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="middle" fill="black">KV状態確認・退避・復元</text>
+<polyline points="885,1135 500,1135" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="692" y="1174" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="middle" fill="black">KV状態・操作結果</text>
+<polyline points="1410,440 1250,440" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1330" y="417" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="middle" fill="black">読込</text>
+<polyline points="1250,735 1410,735" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1330" y="715" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="middle" fill="black">生成・更新</text>
+<polyline points="1410,805 1250,805" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1330" y="844" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="middle" fill="black">再利用</text>
+<polyline points="1250,1065 1410,1065" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1330" y="1045" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="middle" fill="black">退避</text>
+<polyline points="1410,1135 1250,1135" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1330" y="1174" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="middle" fill="black">復元</text>
+<text x="875" y="1283" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="start" fill="black">KVキャッシュはホストのメインメモリに割り当てる。</text>
+<text x="875" y="1325" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="start" fill="black">RTX 5060のVRAM容量を考慮した構成。</text>
+<rect data-box="E05" x="900" y="1480" width="800" height="140" fill="none" stroke="black" stroke-width="2"/>
+<text x="1670" y="1466" font-family="MS Mincho,Yu Mincho,serif" font-size="24" text-anchor="middle" fill="black">E05</text>
+<text x="1300" y="1539" font-family="MS Mincho,Yu Mincho,serif" font-size="29" text-anchor="middle" fill="black">Magnitude</text>
+<text x="1300" y="1581" font-family="MS Mincho,Yu Mincho,serif" font-size="25" text-anchor="middle" fill="black">推論エンジンの移行候補</text>
+<polyline points="1300,1360 1300,1480" fill="none" stroke="black" stroke-width="2" stroke-dasharray="10 8" marker-end="url(#arrow)"/>
+<text x="1322" y="1427" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="start" fill="black">成熟度・必要機能を確認</text>
+<text x="80" y="1668" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="start" fill="black">実線：要求・応答・データの流れ。破線：推論エンジンの移行判断。</text>
+<text x="80" y="1708" font-family="MS Mincho,Yu Mincho,serif" font-size="23" text-anchor="start" fill="black">キャッシュ内容はモデル・入力・実行構成に対応付けて扱う。</text>
+</svg>
